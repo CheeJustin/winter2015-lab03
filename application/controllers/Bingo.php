@@ -14,10 +14,6 @@ class Bingo extends Application {
         parent::__construct();
     }
 
-    //-------------------------------------------------------------
-    //  The normal pages
-    //-------------------------------------------------------------
-
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
 

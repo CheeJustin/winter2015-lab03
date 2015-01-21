@@ -40,12 +40,29 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+
+// Maps to the last controller in the last directory
 $route['last'] = "last/last";
+
+// Maps to the first controller, and runs the zzz function
 $route['sleep'] = "first/zzz";
+
+// Maps to the welcome controller, and runs the shucks function
+// (Meant to satify "lock/em/up")
 $route['lock/(:any)/(:any)'] = "welcome/shucks";
+
+// Maps to the first controller, and runs the gimme function with a 3 as a parameter
 $route['show/(:num)'] = "first/gimme/3";
+
+// Maps to the guess controller
 $route['dunno'] = "guess";
+
+// Maps to the bingo controller
+// (Meant to satisfy "wise/bingo")
 $route['([a-zA-Z]{4})/bingo'] = "bingo";
+
+// Maps to the bingo controller, and runs the wisdom function
+// (Meant to satisfy the "comp4711/wisdom")
 $route['(comp\d+)/(.+)'] = "bingo/wisdom";
 
 
