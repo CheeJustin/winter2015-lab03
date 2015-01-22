@@ -17,7 +17,7 @@ class display_override
         if (preg_match($matchExpression, $output, $leadContent))
         {
             // Finds all the capital letters, and bold them.
-            $leadContent[0] = preg_replace("/([A-Z])/", "<b>$1</b>", $leadContent[0]);
+            $leadContent[0] = preg_replace("/([A-Z])/", "<strong>$1</strong>", $leadContent[0]);
             // Reassmbles the newly formatted text back into the original output.
             $output = preg_replace($matchExpression, $leadContent[0], $output);
         }
